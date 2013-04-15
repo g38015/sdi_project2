@@ -8,6 +8,9 @@
 // Start
 
 // Initial Variables Sting, Number, Array
+var str = ""
+var num = 0
+var ar = [1,2,3]
 
 // Procedure
 
