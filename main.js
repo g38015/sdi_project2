@@ -54,9 +54,8 @@ stringFunction("Yeah", "Killer")
 
 // Array Function
 var arrayFunction = function(num, ar) {
-		var ar = [1,4,8];
-		var pop = ar.pop()
-		console.log(pop);
+		var arr = [];
+		console.log("here is the number " + num + " here is the array " + ar);
 };
-arrayFunction()
+arrayFunction(10, [1,2,3])
               
