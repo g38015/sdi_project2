@@ -9,6 +9,19 @@
 
 // Initial Variables Sting, Number, Array
 
+
+var proceed = function(arg1){
+		if (arg1 === true)
+		{
+			console.log("Go Back");
+		}
+		else
+		{
+			console.log("Return");
+		}
+};
+proceed(1<2);
+
 var boolFunction = function(arg1, arg2){
 		if (arg1 === true)
 		{
