@@ -51,13 +51,12 @@ var stringFunction = function(stringOne, stringTwo){
 		console.log(stringConcat);
 };
 stringFunction("Yeah", "Killer")
-              
-/* Array Function & For Loop
-One function that takes an array and a number and uses them in a for loop of some kind. This should not be a simple index dereference (looking up one value by its index). Make it something more interesting
 
-var arr = function () {
-		for () {
-
-		};
+// Array Function
+var arrayFunction = function(num, ar) {
+		var ar = [1,4,8];
+		var pop = ar.pop()
+		console.log(pop);
 };
-*/	
+arrayFunction()
+              
