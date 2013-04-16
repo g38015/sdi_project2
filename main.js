@@ -16,6 +16,12 @@ var mathFunction = function(snowToday, snowYesterday){
 };
 mathFunction(10,5);
 
+var stringFunction = function(stringOne, stringTwo){
+		var stringConcat = stringOne + " " + stringTwo;
+		console.log(stringConcat);
+};
+stringFunction("Yeah", "Killer")
+
 
 
 /* Procedure
@@ -32,11 +38,6 @@ One function that takes two arguments and does some kind of Boolean comparison b
 
 var boo = function () {};
         
-
-/* String Function
-One function that does something interesting with strings after accepting two strings as arguments. This can be simple concatenation, but you are encouraged to look into other, more interesting string applications
-
-var str = function () {};
         
 /* Array Function & For Loop
 One function that takes an array and a number and uses them in a for loop of some kind. This should not be a simple index dereference (looking up one value by its index). Make it something more interesting
