@@ -9,6 +9,18 @@
 
 // Initial Variables Sting, Number, Array
 
+var boolFunction = function(arg1, arg2){
+		if (arg1 === true)
+		{
+			console.log("I am true");
+	  }
+	  else
+	  {
+	  	console.log("I am false");
+	  }
+};
+boolFunction((1>2) && (2<3))
+
 
 var mathFunction = function(snowToday, snowYesterday){
 		var totalSnow = snowToday + snowYesterday;
@@ -32,13 +44,7 @@ var skiResort = function () {
 
 };
 
-
-/* Boolean Function
-One function that takes two arguments and does some kind of Boolean comparison between them. The data type of the arguments doesn't matter for this function
-
-var boo = function () {};
-        
-        
+                
 /* Array Function & For Loop
 One function that takes an array and a number and uses them in a for loop of some kind. This should not be a simple index dereference (looking up one value by its index). Make it something more interesting
 
