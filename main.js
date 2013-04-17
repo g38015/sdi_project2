@@ -8,7 +8,7 @@
 // Start
 
 // Initial Variables Sting, Number, Array
-var str = "String",
+var skiDecision = "we need to check how many inches to decide where we are going to ski today",
 		num = 10,
 		arr = [],
 		newSnow = true;
@@ -18,36 +18,41 @@ var didItSnow = function(checkForSnow){
 		
 		if (checkForSnow === true)
 		{
-			console.log("It Snowed");
+			console.log("Awesome! It Snowed " + skiDecision);
 		}
 		else
 		{
-			console.log("No Snow");
+			console.log("Since it did not snow let's get ready to head to the slopes anyway");
 		}
 };
 
 // Boolean Function
-var boolFunction = function(arg1, arg2){
-		if (arg1 === true)
+var snowedRoadsClear = function(snowed, roadClear){
+		if (snowed && roadClear === true)
 		{
-			console.log("I am true");
+			console.log("New snow and the roads have been cleared");
 	  }
 	  else
 	  {
-	  	console.log("I am false");
+	  	console.log("We are going to sierra");
 	  }
+	  return "It is " + snowed + " that it has snowed and it is " + roadClear + " the roads are clear"
 };
 
 // Number Function
-var mathFunction = function(snowToday, snowYesterday){
-		var totalSnow = snowToday + snowYesterday;
-		console.log("We have a total of " + totalSnow + " inches of snow to ski on");
+var howMuchSnow = function(snowToday){
+		var totalSnow = snowToday;
+		while (snowToday < 4) {
+			console.log("We now have " + snowToday + " inches of snow to ski on");
+			}
+		return totalSnow;
 };
 
 // String Function
-var stringFunction = function(stringOne, stringTwo){
-		var stringConcat = stringOne + " " + stringTwo;
-		console.log(stringConcat);
+var getReady = function(grabBoots, grabSkis){
+
+		var skiEquipment = "I am taking my " + grabBoots + " boots and my " + grabSkis + " skis for this adventure";
+		return skiEquipment;		
 };
 
 // Array Function
@@ -57,9 +62,10 @@ var arrayFunction = function(num, ar) {
 };
 
 // Main 
-didItSnow(newSnow);
-boolFunction((1>2) && (2<3))
-mathFunction(10,5);
-stringFunction("Yeah", "Killer")
+didItSnow(true); //procedure WORKING
+var areWeReady = snowedRoadsClear(true, true) //boolean WORKING
+console.log(areWeReady) //boolean RETURN VALUE
+howMuchSnow(12); //number
+var readyToSki = getReady("k2", "rock") //string WORKING
+console.log(readyToSki) //string RETURN VALUE
 arrayFunction(10, [1,2,3,4])
-              
