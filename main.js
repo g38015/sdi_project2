@@ -8,21 +8,21 @@
 // Start
 
 // Initial Variables Sting, Number, Array
-var skiDecision = "we need to check how many inches to decide where we are going to ski today",
-		num = 10,
-		arr = [],
-		newSnow = true;
+var skiDecision = "we need to check how many inches and see if the roads are clear to decide where we are going to ski today",
+		snowInches = 12,
+		didItSnow = true,
+		arr = [];
 
 // Procedure Function
 var didItSnow = function(checkForSnow){
 		
 		if (checkForSnow === true)
 		{
-			console.log("Awesome! It Snowed " + skiDecision);
+			console.log("Awesome! It Snowed, " + skiDecision);
 		}
 		else
 		{
-			console.log("Since it did not snow let's get ready to head to the slopes anyway");
+			console.log("Since it did not snow let's get ready to head to Sierra.");
 		}
 };
 
@@ -30,22 +30,26 @@ var didItSnow = function(checkForSnow){
 var snowedRoadsClear = function(snowed, roadClear){
 		if (snowed && roadClear === true)
 		{
-			console.log("New snow and the roads have been cleared");
+			console.log("The roads are clear let's head to Kirkwood.");
 	  }
 	  else
 	  {
-	  	console.log("We are going to sierra");
+	  	console.log("Let's go to Sierra for the day.");
 	  }
-	  return "It is " + snowed + " that it has snowed and it is " + roadClear + " the roads are clear"
+	  return "Decisions decisions what equipment should I take?"
 };
 
 // Number Function
 var howMuchSnow = function(snowToday){
-		var totalSnow = snowToday;
-		while (snowToday < 4) {
-			console.log("We now have " + snowToday + " inches of snow to ski on");
+		//var totalSnow = snowToday;
+		for (var i = 1; i <= snowToday; i = i + 1) {
+			if (i < snowToday) {
+				console.log("This is crazy! We now have " + i + " inches of new snow to ski on.")
+			} else {
+				console.log("Cool! Time to pack up the car.")
 			}
-		return totalSnow;
+		};
+		return snowToday;
 };
 
 // String Function
@@ -56,16 +60,17 @@ var getReady = function(grabBoots, grabSkis){
 };
 
 // Array Function
-var arrayFunction = function(num, ar) {
-		var arr = [];
-		console.log("here is the number " + num + " here is the array " + ar);
-};
+//var arrayFunction = function(num, ar) {
+//		var arr = [];
+//		console.log("here is the number " + num + " here is the array " + ar);
+//};
 
 // Main 
 didItSnow(true); //procedure WORKING
+var newSnow = howMuchSnow(snowInches); //number
+console.log("With " + newSnow + " inches of new snow,") //number RETURN VALUE
 var areWeReady = snowedRoadsClear(true, true) //boolean WORKING
 console.log(areWeReady) //boolean RETURN VALUE
-howMuchSnow(12); //number
-var readyToSki = getReady("k2", "rock") //string WORKING
+var readyToSki = getReady("k2", "powder") //string WORKING
 console.log(readyToSki) //string RETURN VALUE
-arrayFunction(10, [1,2,3,4])
+//arrayFunction(10, [1,2,3,4])
