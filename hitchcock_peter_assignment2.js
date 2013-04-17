@@ -8,7 +8,7 @@
 // Start
 
 // Initial Variables Sting, Number, Array
-var skiDecision = "we need to check how many inches and see if the roads are clear to decide where we are going to ski today",
+var skiDecision = "we need to check how many inches and see if the roads are clear to decide where we are going to ski today.",
     snowInches = 10,
     slopes = ["The Wall", " Sentinal Bowl", " and Cornice"];
 
@@ -29,13 +29,13 @@ var didItSnow = function(checkForSnow) {
 var snowedRoadsClear = function(snowed, roadClear) {
     if (snowed && roadClear === true)
     {
-      console.log("the roads are clear let's head to Kirkwood.");
+      console.log("Let's head to Kirkwood.");
     }
     else
     {
       console.log("Let's go to Sierra for the day.");
     }
-    return "Decisions decisions what equipment should I take?"
+    return "It helped us make a decision knowing that it is " + snowed + " that it snowed and " + roadClear + " that the roads are clear."
 };
 
 // Number Function
@@ -52,18 +52,18 @@ var howMuchSnow = function(snowToday) {
 
 // String Function
 var getReady = function(grabBoots, grabSkis) {
-    var skiEquipment = "Decided I am taking my " + grabBoots + " boots and my " + grabSkis + " skis for this adventure";
+    var skiEquipment = "I am ready to start skiing, putting on my " + grabBoots + " boots and my " + grabSkis + " skis, let's get it on!";
     return skiEquipment;    
 };
 
 // Array Function
-var skiRuns = function(num, ar) {
-    var runs = num;
-    while (runs > ar.length ) {
+var skiRuns = function(numberOfRuns, slopeNames) {
+    var runs = numberOfRuns;
+    while (runs > slopeNames.length ) {
       console.log("We have " + runs + " runs left");
       runs--; 
-    };
-    return "Didn't quite finish our day we missed " + ar.length + " runs.  They were " + slopes + ". Let's come back tomorrow:)";
+    }
+    return "Didn't quite finish our day we missed " + slopeNames.length + " runs. They were " + slopeNames + ". Let's come back tomorrow:)";
 };
 
 // Main 
@@ -72,7 +72,7 @@ var newSnow = howMuchSnow(snowInches); //number
 console.log("With " + newSnow + " inches of new snow,");
 var areWeReady = snowedRoadsClear(true, true); //boolean
 console.log(areWeReady);
-var readyToSki = getReady("k2", "powder"); //string
+var readyToSki = getReady("Salomon", "Rossignol"); //string
 console.log(readyToSki);
-var decideRuns = skiRuns(10, slopes); //array
+var decideRuns = skiRuns(8, slopes); //array
 console.log(decideRuns);
