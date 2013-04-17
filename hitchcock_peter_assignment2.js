@@ -10,7 +10,7 @@
 // Initial Variables Sting, Number, Array
 var skiDecision = "we need to check how many inches and see if the roads are clear to decide where we are going to ski today.",
     snowInches = 10,
-    slopes = ["The Wall", " Sentinal Bowl", " and Cornice"];
+    slopes = ["The Wall", " Sentinal Bowl", " Cornice"];
 
 // Procedure Function
 var didItSnow = function(checkForSnow) {
@@ -27,7 +27,7 @@ var didItSnow = function(checkForSnow) {
 
 // Boolean Function
 var snowedRoadsClear = function(snowed, roadClear) {
-    if (snowed && roadClear === true)
+    if (snowed === true || (snowed && roadClear === true))
     {
       console.log("Let's head to Kirkwood.");
     }
@@ -35,7 +35,7 @@ var snowedRoadsClear = function(snowed, roadClear) {
     {
       console.log("Let's go to Sierra for the day.");
     }
-    return "It helped us make a decision knowing that it is " + snowed + " that it snowed and " + roadClear + " that the roads are clear."
+    return roadClear;
 };
 
 // Number Function
@@ -59,11 +59,12 @@ var getReady = function(grabBoots, grabSkis) {
 // Array Function
 var skiRuns = function(numberOfRuns, slopeNames) {
     var runs = numberOfRuns;
+    var addRun = slopeNames.push(" Lightning")
     while (runs > slopeNames.length ) {
       console.log("We have " + runs + " runs left");
       runs--; 
     }
-    return "Didn't quite finish our day we missed " + slopeNames.length + " runs. They were " + slopeNames + ". Let's come back tomorrow:)";
+    return slopeNames; 
 };
 
 // Main 
@@ -71,8 +72,8 @@ didItSnow(true); //procedure
 var newSnow = howMuchSnow(snowInches); //number
 console.log("With " + newSnow + " inches of new snow,");
 var areWeReady = snowedRoadsClear(true, true); //boolean
-console.log(areWeReady);
+console.log("It helped us make a decision knowing that it is " + areWeReady + " that the roads are clear.");
 var readyToSki = getReady("Salomon", "Rossignol"); //string
 console.log(readyToSki);
 var decideRuns = skiRuns(8, slopes); //array
-console.log(decideRuns);
+console.log("Didn't quite finish our day. We added some extra runs including" + decideRuns[3] + " so we ended up missing " + decideRuns.length + " runs. Let's come back tomorrow:) and finish the remaining runs " + decideRuns + ".");
